@@ -4,11 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>¡Nos Casamos! - Sol & Brian</title>
-    <!-- Fuentes elegantes de Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
-    <!-- Iconos de FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
@@ -57,7 +55,6 @@
         /* AJUSTE CALIBRADO PARA LA PORTADA */
         .slide-portada {
             justify-content: space-between !important; 
-            /* Bajamos el bloque superior al punto intermedio y subimos levemente el inferior */
             padding: 18vh 24px 14vh 24px !important; 
         }
 
@@ -125,13 +122,13 @@
             text-shadow: 0 1px 2px rgba(255,255,255,0.8);
         }
 
-  /* Formato intermedio para el texto superior (Más visible y misma altura) */
+        /* Formato intermedio para el texto superior (Resaltado y misma altura) */
         .portada-superior .subtitle-caps {
             margin-bottom: 0 !important;
-            font-size: 1.2rem; /* Subió un poquito el tamaño para resaltar */
+            font-size: 1.2rem;
             letter-spacing: 6px;
             font-weight: 600;
-            text-shadow: 0 2px 4px rgba(255,255,255,0.9), 0 0 10px rgba(255,255,255,0.5); /* Sombra reforzada */
+            text-shadow: 0 2px 4px rgba(255,255,255,0.9), 0 0 10px rgba(255,255,255,0.5);
         }
 
         .text-body {
@@ -150,6 +147,27 @@
             letter-spacing: 2px;
         }
 
+        /* ESTILO ESPECÍFICO PARA LA NOTA DE ADULTOS */
+        .kids-restriction {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #706354;
+            letter-spacing: 0.5px;
+            margin: 15px 0 20px 0;
+            max-width: 290px;
+            line-height: 1.4;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .kids-restriction i {
+            font-size: 1rem;
+            color: #9c8e7d;
+            opacity: 0.8;
+        }
+
         /* ICONOS */
         .icon-header {
             font-size: 2.2rem;
@@ -160,7 +178,7 @@
 
         /* BOTONES INTERACTIVOS */
         .btn-container {
-            margin-top: 30px;
+            margin-top: 15px;
             width: 100%;
             max-width: 290px;
         }
@@ -251,18 +269,15 @@
 
     <div class="scroll-container">
 
-        <!-- DIAPOSITIVA 1: PORTADA EN PUNTO INTERMEDIO -->
         <section class="slide slide-portada">
             <div class="photo-background">
                 <img src="pareja.png" alt="Sol y Brian">
             </div>
             
-            <!-- Bloque Superior: Altura ideal (punto medio entre ojos y frentes) -->
             <div class="content-layer portada-superior">
                 <div class="subtitle-caps">¡Nos Casamos!</div>
             </div>
             
-            <!-- Bloque Inferior: Bien por debajo del mentón -->
             <div class="content-layer portada-inferior">
                 <div class="title-cursive">Sol & Brian</div>
                 <div class="icon-header" style="margin-bottom: 0; font-size: 1.8rem;"><i class="fa-solid fa-heart"></i></div>
@@ -274,7 +289,6 @@
             </div>
         </section>
 
-        <!-- DIAPOSITIVA 2: FRASE INTRODUCTORIA -->
         <section class="slide slide-with-frame">
             <div class="content-layer">
                 <div class="icon-header"><i class="fa-solid fa-infinity"></i></div>
@@ -290,7 +304,6 @@
             </div>
         </section>
 
-        <!-- DIAPOSITIVA 3: CRONOGRAMA -->
         <section class="slide slide-with-frame">
             <div class="content-layer">
                 <div class="icon-header"><i class="fa-solid fa-calendar-days"></i></div>
@@ -305,14 +318,18 @@
             </div>
         </section>
 
-        <!-- DIAPOSITIVA 4: DRESS CODE Y ASISTENCIA -->
         <section class="slide slide-with-frame">
             <div class="content-layer">
                 <div class="icon-header"><i class="fa-solid fa-user-tie"></i></div>
-                <div class="subtitle-caps" style="margin-bottom: 10px;">Dress Code</div>
-                <p class="text-body" style="font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 25px; color: #514940;">Elegante</p>
+                <div class="subtitle-caps" style="margin-bottom: 5px;">Dress Code</div>
+                <p class="text-body" style="font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: #514940; font-size: 1.05rem;">Elegante</p>
                 
-                <p class="text-body" style="font-size: 1.05rem;">
+                <p class="kids-restriction">
+                    <i class="fa-solid fa-champagne-glasses"></i>
+                    Invitación para 2 personas • Celebración de adultos
+                </p>
+                
+                <p class="text-body" style="font-size: 1.05rem; margin-top: 5px;">
                     Confirmación de asistencia hasta el <strong>10 de Julio</strong>
                 </p>
                 
@@ -328,7 +345,6 @@
             </div>
         </section>
 
-        <!-- DIAPOSITIVA 5: REGALOS / BANCO -->
         <section class="slide slide-with-frame">
             <div class="content-layer">
                 <div class="icon-header"><i class="fa-solid fa-gift"></i></div>
@@ -353,7 +369,6 @@
             </div>
         </section>
 
-        <!-- DIAPOSITIVA 6: CIERRE -->
         <section class="slide slide-with-frame">
             <div class="content-layer">
                 <div class="icon-header" style="font-size: 3rem; color: #706354;"><i class="fa-solid fa-champagne-glasses"></i></div>
@@ -366,7 +381,6 @@
 
     </div>
 
-    <!-- SCRIPT DE COPIADO INTERACTIVO -->
     <script>
         function copiarAlias() {
             const alias = "sol.brian.boda";
