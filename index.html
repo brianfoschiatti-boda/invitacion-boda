@@ -52,6 +52,12 @@
             overflow: hidden;
         }
 
+        /* AJUSTE ESPECÍFICO PARA LA PORTADA (DESPEJAR EL CENTRO) */
+        .slide-portada {
+            justify-content: space-between; /* Distribuye el contenido arriba y abajo */
+            padding: 60px 24px 80px 24px; /* Más espacio vertical interno */
+        }
+
         /* MARCO DE ROSAS BLANCAS CON MARCO-ROSAS.PNG (Para slides 2 a 6) */
         .slide-with-frame::before {
             content: "";
@@ -63,7 +69,7 @@
             background-image: url('marco-rosas.png');
             background-size: cover;
             background-position: center;
-            opacity: 0.35; /* Color claro para que no dificulte la lectura */
+            opacity: 0.35;
             pointer-events: none;
             z-index: 1;
         }
@@ -82,10 +88,10 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            opacity: 0.25; /* Tono muy claro/atenuado para que se siga leyendo el texto perfectamente */
+            opacity: 0.25; /* Tono atenuado para perfecta lectura */
         }
 
-        /* CAPA CONTENEDORA DE TEXTO (Asegura que esté por encima del fondo y los marcos) */
+        /* CAPAS CONTENEDORAS DE TEXTO */
         .content-layer {
             position: relative;
             z-index: 2;
@@ -94,6 +100,15 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
+        }
+
+        /* Bloques específicos de la portada para controlar la separación */
+        .portada-superior {
+            margin-top: 20px; /* Empuja el texto hacia la línea del cabello */
+        }
+
+        .portada-inferior {
+            margin-bottom: 20px; /* Lo acomoda debajo del mentón */
         }
 
         /* TIPOGRAFÍAS */
@@ -114,6 +129,11 @@
             margin-bottom: 25px;
             font-weight: 600;
             text-shadow: 0 1px 2px rgba(255,255,255,0.8);
+        }
+
+        /* Ajuste sutil para el título de portada */
+        .portada-superior .subtitle-caps {
+            margin-bottom: 0; 
         }
 
         .text-body {
@@ -189,7 +209,7 @@
         /* INDICADOR DE SCROLL ANIMADO */
         .scroll-hint {
             position: absolute;
-            bottom: 25px;
+            bottom: 15px;
             font-size: 0.75rem;
             letter-spacing: 2px;
             text-transform: uppercase;
@@ -233,19 +253,22 @@
 
     <div class="scroll-container">
 
-        <section class="slide">
+        <section class="slide slide-pordada">
             <div class="photo-background">
                 <img src="pareja.png" alt="Sol y Brian">
             </div>
             
-            <div class="content-layer">
+            <div class="content-layer portada-superior">
                 <div class="subtitle-caps">¡Nos Casamos!</div>
+            </div>
+            
+            <div class="content-layer portada-inferior">
                 <div class="title-cursive">Sol & Brian</div>
-                <div class="icon-header" style="margin-top: 10px;"><i class="fa-solid fa-heart"></i></div>
+                <div class="icon-header" style="margin-bottom: 0;"><i class="fa-solid fa-heart"></i></div>
             </div>
 
             <div class="scroll-hint">
-                <span>Deslizá hacia abajo</span>
+                <span>Deslizá</span>
                 <i class="fa-solid fa-chevron-down"></i>
             </div>
         </section>
