@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>¡Nos Casamos! - Sol & Brian</title>
+    <!-- Fuentes elegantes de Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Iconos de FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
@@ -52,10 +54,10 @@
             overflow: hidden;
         }
 
-        /* AJUSTE ESPECÍFICO PARA LA PORTADA (DESPEJAR EL CENTRO) */
+        /* AJUSTE ESTRICTO PARA SEPARAR EL CONTENIDO DE LA PORTADA */
         .slide-portada {
-            justify-content: space-between; /* Distribuye el contenido arriba y abajo */
-            padding: 60px 24px 80px 24px; /* Más espacio vertical interno */
+            justify-content: space-between !important; 
+            padding: 7vh 24px 12vh 24px !important; /* Usa porcentaje del alto de la pantalla */
         }
 
         /* MARCO DE ROSAS BLANCAS CON MARCO-ROSAS.PNG (Para slides 2 a 6) */
@@ -88,7 +90,7 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            opacity: 0.25; /* Tono atenuado para perfecta lectura */
+            opacity: 0.25;
         }
 
         /* CAPAS CONTENEDORAS DE TEXTO */
@@ -102,13 +104,14 @@
             align-items: center;
         }
 
-        /* Bloques específicos de la portada para controlar la separación */
+        /* Forzamos al bloque de arriba a subir a la altura de la frente */
         .portada-superior {
-            margin-top: 20px; /* Empuja el texto hacia la línea del cabello */
+            margin-top: 10px;
         }
 
+        /* Forzamos al bloque de abajo a bajar del mentón para abajo */
         .portada-inferior {
-            margin-bottom: 20px; /* Lo acomoda debajo del mentón */
+            margin-bottom: 20px;
         }
 
         /* TIPOGRAFÍAS */
@@ -116,8 +119,8 @@
             font-family: 'Alex Brush', cursive;
             font-size: 3.8rem;
             color: #706354;
-            margin-bottom: 10px;
-            line-height: 1.2;
+            margin-bottom: 5px;
+            line-height: 1.1;
             text-shadow: 0 2px 4px rgba(255,255,255,0.8);
         }
 
@@ -131,9 +134,10 @@
             text-shadow: 0 1px 2px rgba(255,255,255,0.8);
         }
 
-        /* Ajuste sutil para el título de portada */
         .portada-superior .subtitle-caps {
-            margin-bottom: 0; 
+            margin-bottom: 0 !important;
+            font-size: 1rem;
+            letter-spacing: 6px;
         }
 
         .text-body {
@@ -209,8 +213,8 @@
         /* INDICADOR DE SCROLL ANIMADO */
         .scroll-hint {
             position: absolute;
-            bottom: 15px;
-            font-size: 0.75rem;
+            bottom: 12px;
+            font-size: 0.72rem;
             letter-spacing: 2px;
             text-transform: uppercase;
             color: #9c8e7d;
@@ -218,7 +222,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 5px;
+            gap: 3px;
             opacity: 0.8;
             pointer-events: none;
             z-index: 3;
@@ -226,8 +230,8 @@
 
         @keyframes bounce {
             0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-            40% { transform: translateY(-8px); }
-            60% { transform: translateY(-4px); }
+            40% { transform: translateY(-6px); }
+            60% { transform: translateY(-3px); }
         }
 
         /* CUADRO DE DATOS BANCARIOS */
@@ -253,18 +257,21 @@
 
     <div class="scroll-container">
 
-        <section class="slide slide-pordada">
+        <!-- DIAPOSITIVA 1: PORTADA CORREGIDA -->
+        <section class="slide slide-portada">
             <div class="photo-background">
                 <img src="pareja.png" alt="Sol y Brian">
             </div>
             
+            <!-- Bloque Superior: Nivel de las frentes -->
             <div class="content-layer portada-superior">
                 <div class="subtitle-caps">¡Nos Casamos!</div>
             </div>
             
+            <!-- Bloque Inferior: Nivel del mentón / trajes hacia abajo -->
             <div class="content-layer portada-inferior">
                 <div class="title-cursive">Sol & Brian</div>
-                <div class="icon-header" style="margin-bottom: 0;"><i class="fa-solid fa-heart"></i></div>
+                <div class="icon-header" style="margin-bottom: 0; font-size: 1.8rem;"><i class="fa-solid fa-heart"></i></div>
             </div>
 
             <div class="scroll-hint">
@@ -273,6 +280,7 @@
             </div>
         </section>
 
+        <!-- DIAPOSITIVA 2: FRASE INTRODUCTORIA -->
         <section class="slide slide-with-frame">
             <div class="content-layer">
                 <div class="icon-header"><i class="fa-solid fa-infinity"></i></div>
@@ -288,6 +296,7 @@
             </div>
         </section>
 
+        <!-- DIAPOSITIVA 3: CRONOGRAMA -->
         <section class="slide slide-with-frame">
             <div class="content-layer">
                 <div class="icon-header"><i class="fa-solid fa-calendar-days"></i></div>
@@ -302,6 +311,7 @@
             </div>
         </section>
 
+        <!-- DIAPOSITIVA 4: DRESS CODE Y ASISTENCIA -->
         <section class="slide slide-with-frame">
             <div class="content-layer">
                 <div class="icon-header"><i class="fa-solid fa-user-tie"></i></div>
@@ -324,6 +334,7 @@
             </div>
         </section>
 
+        <!-- DIAPOSITIVA 5: REGALOS / BANCO -->
         <section class="slide slide-with-frame">
             <div class="content-layer">
                 <div class="icon-header"><i class="fa-solid fa-gift"></i></div>
@@ -348,6 +359,7 @@
             </div>
         </section>
 
+        <!-- DIAPOSITIVA 6: CIERRE -->
         <section class="slide slide-with-frame">
             <div class="content-layer">
                 <div class="icon-header" style="font-size: 3rem; color: #706354;"><i class="fa-solid fa-champagne-glasses"></i></div>
@@ -360,6 +372,7 @@
 
     </div>
 
+    <!-- SCRIPT DE COPIADO INTERACTIVO -->
     <script>
         function copiarAlias() {
             const alias = "sol.brian.boda";
