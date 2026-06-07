@@ -54,10 +54,11 @@
             overflow: hidden;
         }
 
-        /* AJUSTE ESTRICTO PARA SEPARAR EL CONTENIDO DE LA PORTADA */
+        /* AJUSTE CALIBRADO PARA LA PORTADA */
         .slide-portada {
             justify-content: space-between !important; 
-            padding: 7vh 24px 12vh 24px !important; /* Usa porcentaje del alto de la pantalla */
+            /* Bajamos el bloque superior al punto intermedio y subimos levemente el inferior */
+            padding: 18vh 24px 14vh 24px !important; 
         }
 
         /* MARCO DE ROSAS BLANCAS CON MARCO-ROSAS.PNG (Para slides 2 a 6) */
@@ -104,16 +105,6 @@
             align-items: center;
         }
 
-        /* Forzamos al bloque de arriba a subir a la altura de la frente */
-        .portada-superior {
-            margin-top: 10px;
-        }
-
-        /* Forzamos al bloque de abajo a bajar del mentón para abajo */
-        .portada-inferior {
-            margin-bottom: 20px;
-        }
-
         /* TIPOGRAFÍAS */
         .title-cursive {
             font-family: 'Alex Brush', cursive;
@@ -134,6 +125,7 @@
             text-shadow: 0 1px 2px rgba(255,255,255,0.8);
         }
 
+        /* Formato intermedio para el texto superior */
         .portada-superior .subtitle-caps {
             margin-bottom: 0 !important;
             font-size: 1rem;
@@ -257,18 +249,18 @@
 
     <div class="scroll-container">
 
-        <!-- DIAPOSITIVA 1: PORTADA CORREGIDA -->
+        <!-- DIAPOSITIVA 1: PORTADA EN PUNTO INTERMEDIO -->
         <section class="slide slide-portada">
             <div class="photo-background">
                 <img src="pareja.png" alt="Sol y Brian">
             </div>
             
-            <!-- Bloque Superior: Nivel de las frentes -->
+            <!-- Bloque Superior: Altura ideal (punto medio entre ojos y frentes) -->
             <div class="content-layer portada-superior">
                 <div class="subtitle-caps">¡Nos Casamos!</div>
             </div>
             
-            <!-- Bloque Inferior: Nivel del mentón / trajes hacia abajo -->
+            <!-- Bloque Inferior: Bien por debajo del mentón -->
             <div class="content-layer portada-inferior">
                 <div class="title-cursive">Sol & Brian</div>
                 <div class="icon-header" style="margin-bottom: 0; font-size: 1.8rem;"><i class="fa-solid fa-heart"></i></div>
